@@ -31,7 +31,7 @@ $start = microtime(true);
 
 /* Scan directory for folders excluding items in $blacklist array */
 if ($handle = opendir('.')) {
-    $blacklist = array('.', '..', 'index.php', 'simple_html_dom.php', 'styles.css', 'pull.php', 'default.jpg', 'settings.php', 'readme.txt', 'error_log');
+    $blacklist = array('.', '..', 'index.php', 'simple_html_dom.php', 'styles.css', 'pull.php', 'default.jpg', 'settings.php', 'readme.txt', 'error_log', 'LICENSE', 'README.md');
     while (false !== ($file = readdir($handle))) {
         if (!in_array($file, $blacklist)) {
 			$folders[] = $file; // Create array of folders for processing
